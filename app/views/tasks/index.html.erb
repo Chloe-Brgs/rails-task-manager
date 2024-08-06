@@ -1,0 +1,11 @@
+<h1>My Tasks</h1>
+
+<%# a view should loop over these to display them
+er + TAB & pe +TAB = raccouri %>
+
+<% @tasks.each do |task| %>
+  <input type="checkbox"  name="<%= task.title %>"/>
+  <label for="<%= task.title %>"> <%= link_to task.title, task_path(task.id)%> <br> </label>
+<% end %>
+
+<%= link_to "Add a new Task", new_task_path %> <%# new_task car c le nom donné a new %>
